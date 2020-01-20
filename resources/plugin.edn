@@ -1,2 +1,2 @@
-{:description "Markdown parser"
- :init cryogen-markdown.core/init}
+{:description "Flexmark parser"
+ :init cryogen-flexmark.core/init}

@@ -1,6 +1,6 @@
-(ns cryogen-markdown.core-test
+(ns cryogen-flexmark.core-test
   (:require [clojure.test :refer :all]
-            [cryogen-markdown.core :refer :all]))
+            [cryogen-flexmark.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."
