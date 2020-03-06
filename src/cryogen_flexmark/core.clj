@@ -4,12 +4,16 @@
   (:import cryogen_core.markup.Markup
            com.vladsch.flexmark.parser.Parser
            com.vladsch.flexmark.html.HtmlRenderer
-           (com.vladsch.flexmark.util.options MutableDataSet)))
+           (com.vladsch.flexmark.util.data MutableDataSet)
+           (com.vladsch.flexmark.ext.footnotes FootnoteExtension)
+           (java.util ArrayList)))
 
 (defn markdown
   "Returns a Markdown (CommonMark) implementation of the Markup protocol."
   []
-  (let [options (-> (MutableDataSet.)
+  (let [extensions [(FootnoteExtension/create)]
+        options (-> (MutableDataSet.)
+                    (.set Parser/EXTENSIONS (ArrayList. extensions))
                     (.set HtmlRenderer/GENERATE_HEADER_ID true)
                     (.set HtmlRenderer/RENDER_HEADER_ID true))
         parser (.build (Parser/builder options))

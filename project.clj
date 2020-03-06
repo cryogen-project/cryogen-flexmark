@@ -5,4 +5,6 @@
             :url "https://opensource.org/licenses/BSD-2-Clause"}
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [cryogen-core "0.3.1"]
-                 [com.vladsch.flexmark/flexmark "0.12.3"]])
+                 [com.vladsch.flexmark/flexmark "0.60.2"]
+                 [com.vladsch.flexmark/flexmark-util "0.60.2"]
+                 [com.vladsch.flexmark/flexmark-ext-footnotes "0.60.2"]])
