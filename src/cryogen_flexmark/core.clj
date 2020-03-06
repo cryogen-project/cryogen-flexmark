@@ -16,6 +16,7 @@
                     (TablesExtension/create)]
         options (-> (MutableDataSet.)
                     (.set Parser/EXTENSIONS (ArrayList. extensions))
+                    (.set HtmlRenderer/FENCED_CODE_LANGUAGE_CLASS_PREFIX "")
                     (.set HtmlRenderer/GENERATE_HEADER_ID true)
                     (.set HtmlRenderer/RENDER_HEADER_ID true))
         parser (.build (Parser/builder options))
