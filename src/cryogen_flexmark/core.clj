@@ -6,12 +6,14 @@
            com.vladsch.flexmark.html.HtmlRenderer
            (com.vladsch.flexmark.util.data MutableDataSet)
            (com.vladsch.flexmark.ext.footnotes FootnoteExtension)
+           (com.vladsch.flexmark.ext.tables TablesExtension)
            (java.util ArrayList)))
 
 (defn markdown
   "Returns a Markdown (CommonMark) implementation of the Markup protocol."
   []
-  (let [extensions [(FootnoteExtension/create)]
+  (let [extensions [(FootnoteExtension/create)
+                    (TablesExtension/create)]
         options (-> (MutableDataSet.)
                     (.set Parser/EXTENSIONS (ArrayList. extensions))
                     (.set HtmlRenderer/GENERATE_HEADER_ID true)
