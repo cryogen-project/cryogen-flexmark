@@ -6,6 +6,7 @@
            com.vladsch.flexmark.html.HtmlRenderer
            (com.vladsch.flexmark.util.data MutableDataSet)
            (com.vladsch.flexmark.ext.footnotes FootnoteExtension)
+           (com.vladsch.flexmark.ext.gfm.strikethrough StrikethroughExtension)
            (com.vladsch.flexmark.ext.superscript SuperscriptExtension)
            (com.vladsch.flexmark.ext.tables TablesExtension)
            (java.util ArrayList)))
@@ -14,6 +15,7 @@
   "Returns a Markdown (CommonMark) implementation of the Markup protocol."
   []
   (let [extensions [(FootnoteExtension/create)
+                    (StrikethroughExtension/create)
                     (SuperscriptExtension/create)
                     (TablesExtension/create)]
         options (-> (MutableDataSet.)
