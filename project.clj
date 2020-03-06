@@ -8,4 +8,5 @@
                  [com.vladsch.flexmark/flexmark "0.60.2"]
                  [com.vladsch.flexmark/flexmark-util "0.60.2"]
                  [com.vladsch.flexmark/flexmark-ext-footnotes "0.60.2"]
+                 [com.vladsch.flexmark/flexmark-ext-superscript "0.60.2"]
                  [com.vladsch.flexmark/flexmark-ext-tables "0.60.2"]])
