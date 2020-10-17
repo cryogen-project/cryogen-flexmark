@@ -1,4 +1,4 @@
-(defproject cryogen-flexmark "0.1.3"
+(defproject cryogen-flexmark "0.1.4"
   :description "Markdown parser for Cryogen"
   :url "https://github.com/cryogen-project/cryogen-flexmark"
   :license {:name "BSD 2"
