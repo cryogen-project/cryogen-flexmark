@@ -27,7 +27,7 @@
         renderer (.build (HtmlRenderer/builder options))]
    (reify Markup
     (dir [this] "md")
-    (ext [this] ".md")
+    (exts [this] #{".md"})
     (render-fn [this]
       (fn [rdr config]
         (->> (java.io.BufferedReader. rdr)
