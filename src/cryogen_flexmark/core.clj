@@ -5,6 +5,7 @@
            com.vladsch.flexmark.parser.Parser
            com.vladsch.flexmark.html.HtmlRenderer
            (com.vladsch.flexmark.util.data MutableDataSet)
+           (com.vladsch.flexmark.ext.attributes AttributesExtension)
            (com.vladsch.flexmark.ext.footnotes FootnoteExtension)
            (com.vladsch.flexmark.ext.gfm.strikethrough StrikethroughExtension)
            (com.vladsch.flexmark.ext.superscript SuperscriptExtension)
@@ -17,7 +18,8 @@
   (let [extensions [(FootnoteExtension/create)
                     (StrikethroughExtension/create)
                     (SuperscriptExtension/create)
-                    (TablesExtension/create)]
+                    (TablesExtension/create)
+                    (AttributesExtension/create)]
         options (-> (MutableDataSet.)
                     (.set Parser/EXTENSIONS (ArrayList. extensions))
                     (.set HtmlRenderer/FENCED_CODE_LANGUAGE_CLASS_PREFIX "")
